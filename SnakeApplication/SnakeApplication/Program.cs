@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace SnakeApplication
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
+            //On ne fais pas la loop ici pour pouvoir inserer le main menu.
+            MainLoop.Loop();
         }
     }
 }
