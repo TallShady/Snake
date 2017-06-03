@@ -1,22 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SnakeApplication
 {
     public static class MainLoop
     {
-        private static bool loop { get; set;}
+        private static bool Loop { get; set;}
 
         static MainLoop()
         {
-            loop = true;
+            Loop = true;
         }
 
 
-        public static void Loop()
+        public static void StartLoop()
         {
             //initiate dot and the frame
             var dot = new Dot();
@@ -58,7 +54,7 @@ namespace SnakeApplication
                             frame.UpdateFrame(dot);
                             break;
                         default:
-                            loop = false;
+                            Loop = false;
                             break;
                     }
                 }
@@ -67,7 +63,7 @@ namespace SnakeApplication
 
                 //refreshRate
                 System.Threading.Thread.Sleep(99);
-            } while (loop);
+            } while (Loop);
             Console.ReadKey();
         }
     }

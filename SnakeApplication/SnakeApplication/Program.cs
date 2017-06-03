@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SnakeApplication
+﻿namespace SnakeApplication
 {
     internal class Program
     {
-        private static void Main(string[] args)
+        private static void Main()
         {
             //On ne fais pas la loop ici pour pouvoir inserer le main menu.
-            MainLoop.Loop();
+            MainLoop.StartLoop();
         }
     }
 }
